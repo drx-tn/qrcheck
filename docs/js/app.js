@@ -141,7 +141,7 @@ function validateThis(scanStr,resultDiv) {
 
 window.addEventListener('load', function () {
 // Service Worker
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', {scope: '/'});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', {scope: '/qrcheck/'});
 // Init
 let selectedDeviceId;
 const codeReader = new ZXing.BrowserMultiFormatReader();
