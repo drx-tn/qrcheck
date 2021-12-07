@@ -22,8 +22,10 @@
     main {
             width: 100%;
             max-width: 480px;
-            padding: 15px;
+            padding: 20px;
             margin: auto;
+            background-color: #e0e0e0;
+            border-radius: 25px;
         }
     </style>
 </head>
@@ -39,8 +41,9 @@
         <div>
             <button id="start" type="button" class="btn btn-primary">Scanner</button>
             <button id="reset" type="button" class="btn btn-primary">Annuler</button>
+            <button type="button" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#aboutModal">A propos</button>
         </div>
-        <!--Modal Begin-->
+        <!--Result Begin-->
         <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -48,7 +51,7 @@
                         <h5 class="modal-title" id="resultModalLabel">QRCheck</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         <div id="result"></div>
                     </div>
                     <div class="modal-footer">
@@ -57,7 +60,33 @@
                 </div>
             </div>
         </div>
-        <!--Modal End-->
+        <!--Result End-->
+        <!--About Begin-->
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="aboutModalLabel">QRCheck</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <p class="text-center"><img src="img/favicon.svg" alt="QRCheck" with="232" height="232"><br/><b>QRCheck : Vérification des Cachets Electroniques TN CEV 2D-Doc</b></p>
+                        <p>Cette application a été développée par Dr. Nizar Ben Ltaief, médecin à plein temps au Groupement de Médecine du Travail du Gouvernorat de Sousse.</p>
+                        <p>Cette application correspond à un refactoring de l'application <a href="https://play.google.com/store/apps/details?id=com.gnirt69.qrcodesannerexample" target="_blank" rel="noopener noreferrer">QR-Check</a> développée pour la plateforme Android par l'Agence Nationale de Certification Electronique TUNTRUST.</p>
+                        <p>Contrairement à cette dernière, QRCheck est une application Progressive Web App pouvant être utilisée en ligne ou installée et utilisée en hors ligne sur les téléphones et tablettes Android et iOs ainsi que sur les ordinateurs PC Windows, Linux et Mac OS. QRCheck permet aussi de basculer entre les différentes caméras pouvant être connectées au système utilisé.</p>
+                        <p>Le but de cette application est de faciliter la vérification de la validité des passes vaccinaux et des certificats de vaccination.</p>
+                        <p>
+                            <b>Code source:</b> <a href="https://github.com/drx-tn/qrcheck" target="_blank" rel="noopener noreferrer">https://github.com/drx-tn/qrcheck</a><br/>
+                            <b>Contact :</b> <a href="https://drx.tn/contact" target="_blank" rel="noopener noreferrer">https://drx.tn/contact</a>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--About End-->
     </main>
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

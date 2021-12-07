@@ -52,9 +52,7 @@ function hexabyte(s) {
     var data = [];
     for (var i = 0; i < len; i += 2) {
         var value = (parseInt(s.charAt(i), 16) << 4) + parseInt(s.charAt(i + 1), 16);
-        if (value > 127) {
-            value -= 256;
-        }
+        if (value > 127) value -= 256;
         data[i / 2] = value;
     }
     return data;
@@ -62,10 +60,9 @@ function hexabyte(s) {
 function bytestring(data) {
     var count = data.length;
     var str = "";
-    for (var index = 0; index < count; index += 1)
-        str += String.fromCharCode(data[index]);
+    for (var index = 0; index < count; index += 1) str += String.fromCharCode(data[index]);
     return str;
-};
+}
 function base64ToHex(str) {
     var raw = atob(str);
     var result = '';
@@ -74,7 +71,7 @@ function base64ToHex(str) {
         result += (hex.length === 2 ? hex : '0' + hex);
     }
     return result.toUpperCase();
-};
+}
 function decode(scanStr) {
 var str = scanStr.substring(26, strDc.length);
 var i = 0;
@@ -118,7 +115,7 @@ function validateThis(scanStr,resultDiv) {
     }
     //-->
     if (codeDoc==="AO") {
-        data.push({"label" : "نوع الوثيقة Document type", "value" : "جواز التلقيح كوفيد-19 VACCINE PASSPORT COVID-19"});
+        data.push({"label" : "Document type / نوع الوثيقة", "value" : "جواز التلقيح كوفيد-19 VACCINE PASSPORT COVID-19"});
         pchamps.map(function (item) {
             datavalue.find(function (o, i) {
                 if (o.code_champ === item.code_champ) {
